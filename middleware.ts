@@ -10,9 +10,11 @@ const isPublicRoute = createRouteMatcher([
 ]);
 
 // export default clerkMiddleware();
-export default clerkMiddleware((auth, req) => {
-    if (isProtectedRoute(req) && !isPublicRoute(req)) auth().protect();
-  });
+// export default clerkMiddleware((auth, req) => {
+//     if (isProtectedRoute(req) && !isPublicRoute(req)) auth().protect();
+//   });
+
+export default clerkMiddleware()
 
 export const config = {
 //   matcher: ["/((?!.*\..*|_next).*)", "/", "/(api|trpc)(.*)"],
